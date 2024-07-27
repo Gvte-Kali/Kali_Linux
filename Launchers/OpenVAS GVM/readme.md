@@ -25,6 +25,7 @@ This script automates the management of an OpenVAS Docker container and the laun
    ```bash
    sudo chmod +x launch_openvas.sh
 
+# OPTIONNAL
 3. **Add a shortcut**
 
    Download the OpenVAS_gvm.desktop file, open it and modify the line '''"Exec=bash path_to_file.sh"''' with your path to the script
