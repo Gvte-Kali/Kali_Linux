@@ -58,13 +58,13 @@ echo -e "${BLUE}\nWaiting for the web server to be functional...${NC}"
 wait_for_webserver
 echo -e "${GREEN}The web server is now functional.${NC}"
 
-# Check if Brave is open
-if ps aux | grep -i '[b]rave' > /dev/null; then
-    echo -e "${BLUE}Brave is already open. Opening a new tab...${NC}"
-    brave-browser --new-tab https://127.0.0.1 &
+# Check if a web browser is open
+if pgrep -x "firefox" > /dev/null || pgrep -x "chrome" > /dev/null || pgrep -x "brave" > /dev/null; then
+    echo -e "${BLUE}A web browser is already open. Opening a new tab...${NC}"
+    xdg-open https://127.0.0.1 &
 else
-    echo -e "${BLUE}Launching Brave with the 'kali' profile...${NC}"
-    brave-browser --profile-directory="Profile 1" https://127.0.0.1 &
+    echo -e "${BLUE}Launching the default web browser with the URL...${NC}"
+    xdg-open https://127.0.0.1 &
 fi
 
 # Display a message indicating that the instance is open
