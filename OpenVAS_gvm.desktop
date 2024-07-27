@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=OpenVAS_gvm
+Comment=
+Exec=bash /home/kali/Apps/gvm/GVM_Start.sh
+Icon=gvm
+Path=/home/kali/Sandbox
+Terminal=true
+StartupNotify=false
